@@ -1,1 +1,1 @@
-<h1>Welcome to the website</h1>
+<h1>Website Quản lý tin tức</h1>
