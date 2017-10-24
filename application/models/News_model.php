@@ -7,6 +7,11 @@ class News_model extends CI_Model {
 	{
 		return $this->db->get('posts')->result_array();
 	}
+	public function Create($author,$title,$content)
+	{
+		$data = array('author' => $author,'title'=>$title,'content'=>$content );
+		$this->db->insert('posts', $data);
+	}
 }
 
 /* End of file News_model.php */

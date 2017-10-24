@@ -1,1 +1,1 @@
-<h1>Website Quản lý tin tức</h1>
+<h1>Website Quản lý tin tức</h1>
