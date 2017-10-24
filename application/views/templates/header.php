@@ -3,9 +3,10 @@
 <head>
 	<title>Web002</title>
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/bootstrap.css">
+
 </head>
 <body>
-  <nav class="navbar navbar-default">
+  <nav class="navbar navbar-inverse">
     <div class="container-fluid">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -29,7 +30,7 @@
         <?php else: ?>
           <ul class="nav navbar-nav navbar-right">
             <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><b><?php echo $this->session->userdata('username'); ?></b><span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><b><?php echo $this->session->userdata('username'); ?></b><span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="./Users/Logout">Logout</a></li>
               </ul>
@@ -66,14 +67,13 @@
           </div>
         <?php endif; ?>
       </div>
-    </div>
-  </nav>
+    </nav>
 
-  <div class="container">
-    <?php if ($this->session->flashdata('message')): ?>
-      <div class="alert alert-dismissible alert-warning">
-        <p>
-          <?php echo $this->session->flashdata('message'); ?>
-        </p>
-      </div>
-    <?php endif; ?>
+    <div class="container">
+      <?php if ($this->session->flashdata('message')): ?>
+        <div class="alert alert-dismissible alert-warning">
+          <p>
+            <?php echo $this->session->flashdata('message'); ?>
+          </p>
+        </div>
+      <?php endif; ?>
