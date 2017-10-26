@@ -13,7 +13,6 @@
 		<div class="form-group">
 			<div class="col-md-12 col-md-offset-0">
 				<button type="submit" class="btn btn-warning">Submit</button>
-				<!-- <button type="reset" class="btn btn-danger disable">Cancel</button> -->
 			</div>
 		</div>
 	</div>

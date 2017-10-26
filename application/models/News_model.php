@@ -13,8 +13,10 @@ class News_model extends CI_Model {
 	}
 	public function Create($author_id,$title,$content)
 	{
-		$data = array('author_id' => $author_id,'title'=>$title,'content'=>$content );
-		$this->db->insert('posts', $data);
+		// $data = array('author_id' => $author_id,'title'=>$title,'content'=>$content );
+		// $this->db->insert('posts', $data);
+		$query="INSERT INTO `posts` (`title`, `author_id`, `content`) VALUES ('".$title."','".$author_id."','".$content."')";
+		$this->db->query($query);
 	}
 	public function Get_post($post_id,$user_id)
 	{
@@ -30,6 +32,11 @@ class News_model extends CI_Model {
 		$this->db->flush_cache();
 		$this->db->where('post_id', $post_id);
 		$this->db->update('posts',array('title' => $title, 'content'=>$content));
+	}
+	public function Delete($post_id)
+	{
+		$this->db->flush_cache();
+		$this->db->delete('posts', array('post_id' => $post_id)); 
 	}
 }
 
