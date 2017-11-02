@@ -15,6 +15,8 @@ class News_model extends CI_Model {
 	{
 		// $data = array('author_id' => $author_id,'title'=>$title,'content'=>$content );
 		// $this->db->insert('posts', $data);
+		$title=htmlspecialchars($title, ENT_COMPAT);
+		$content=htmlspecialchars($content, ENT_COMPAT);
 		$query="INSERT INTO `posts` (`title`, `author_id`, `content`) VALUES ('".$title."','".$author_id."','".$content."')";
 		$this->db->query($query);
 	}

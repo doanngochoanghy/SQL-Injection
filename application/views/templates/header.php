@@ -21,7 +21,7 @@
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
           <li><a href="<?php echo base_url(); ?>News">News</a></li>
-          <?php if ($this->session->userdata('is_admin')==1): ?>
+          <?php if (!empty($this->session->userdata('is_admin'))&&$this->session->userdata('is_admin')==1): ?>
             <li><a href="<?php echo base_url();?>News/Create">Create</a></li>
           <?php endif;?>
         </ul>
