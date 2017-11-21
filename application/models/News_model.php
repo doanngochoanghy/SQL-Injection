@@ -9,6 +9,7 @@ class News_model extends CI_Model {
 		$this->db->select('*');
 		$this->db->from('posts');
 		$this->db->join('users', 'posts.author_id = users.user_id', 'left');
+		$this->db->order_by("date_created", "desc");
 		return $this->db->get()->result_array();
 	}
 	public function Create($author_id,$title,$content)

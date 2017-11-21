@@ -1,9 +1,7 @@
 <div class="panel-group">
 <?php foreach ($list as $post):?>
 	<div class=" panel panel-primary">
-		<div class="panel-heading" style="font-size: 20px" >
-			<?php echo $post['title']; ?>
-		</div>
+		<div class="panel-heading" style="font-size: 20px" ><?php echo $post['title']; ?></div>
 		<div class="panel-body" style="padding-right: 0px;padding-top: 0px;padding-left: 0px;padding-bottom: 0px;">
 			<pre style="margin-bottom: 0px;font-size: 15px;border-radius:0px" ><?php echo $post['content']; ?></pre>
 		</div>
